@@ -1,0 +1,222 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Visual Catalog</title>
+  <style>
+    :root {
+      --primary: #06c167;
+      --bg: #f8f9fa;
+      --text: #212529;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    header {
+      background: url('https://source.unsplash.com/1600x600/?food') no-repeat center center/cover;
+      height: 60vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      color: white;
+      padding: 2rem;
+    }
+
+    header h1 {
+      font-size: 3rem;
+      background-color: rgba(0,0,0,0.5);
+      padding: 1rem 2rem;
+      border-radius: 8px;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+    }
+
+    .categories {
+      display: flex;
+      overflow-x: auto;
+      gap: 1rem;
+      padding: 1rem 0;
+    }
+
+    .category-card {
+      flex: 0 0 auto;
+      width: 200px;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      overflow: hidden;
+      text-align: center;
+    }
+
+    .category-card img {
+      width: 100%;
+      height: 120px;
+      object-fit: cover;
+    }
+
+    .category-card h3 {
+      padding: 1rem;
+    }
+
+    .section-title {
+      margin: 2rem 0 1rem;
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .product-card {
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .product-card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+    }
+
+    .product-info {
+      padding: 1rem;
+      flex-grow: 1;
+    }
+
+    .product-info h4 {
+      margin-bottom: 0.5rem;
+    }
+
+    .product-info p {
+      font-size: 0.9rem;
+      color: #555;
+    }
+
+    .product-info button {
+      margin-top: 1rem;
+      background: var(--primary);
+      color: white;
+      border: none;
+      padding: 0.5rem 1rem;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .product-info button:hover {
+      background: #049e4f;
+    }
+
+    footer {
+      background: #eee;
+      text-align: center;
+      padding: 1rem;
+      margin-top: 3rem;
+      font-size: 0.9rem;
+    }
+
+    @media(max-width: 600px) {
+      header h1 {
+        font-size: 2rem;
+      }
+
+      .categories {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .category-card {
+        width: 90%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Explore Our Catalog</h1>
+  </header>
+
+  <div class="container">
+
+    <div class="section-title">Shop by Category</div>
+    <div class="categories">
+      <div class="category-card">
+        <img src="https://source.unsplash.com/400x300/?pizza" alt="Pizza">
+        <h3>Pizza</h3>
+      </div>
+      <div class="category-card">
+        <img src="https://source.unsplash.com/400x300/?sushi" alt="Sushi">
+        <h3>Sushi</h3>
+      </div>
+      <div class="category-card">
+        <img src="https://source.unsplash.com/400x300/?burger" alt="Burgers">
+        <h3>Burgers</h3>
+      </div>
+      <div class="category-card">
+        <img src="https://source.unsplash.com/400x300/?dessert" alt="Desserts">
+        <h3>Desserts</h3>
+      </div>
+    </div>
+
+    <div class="section-title">Featured Products</div>
+    <div class="product-grid">
+      <div class="product-card">
+        <img src="https://source.unsplash.com/400x300/?salad" alt="Salad">
+        <div class="product-info">
+          <h4>Fresh Salad</h4>
+          <p>Crisp, clean, and locally sourced veggies.</p>
+          <button>View More</button>
+        </div>
+      </div>
+      <div class="product-card">
+        <img src="https://source.unsplash.com/400x300/?tacos" alt="Tacos">
+        <div class="product-info">
+          <h4>Spicy Tacos</h4>
+          <p>Flavor-packed tacos with a kick.</p>
+          <button>View More</button>
+        </div>
+      </div>
+      <div class="product-card">
+        <img src="https://source.unsplash.com/400x300/?coffee" alt="Coffee">
+        <div class="product-info">
+          <h4>Artisan Coffee</h4>
+          <p>Locally roasted, fresh brewed.</p>
+          <button>View More</button>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <footer>
+    &copy; 2025 Your Brand Name. All rights reserved.
+  </footer>
+
+</body>
+</html>
